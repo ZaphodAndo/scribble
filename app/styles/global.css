@@ -1,0 +1,13 @@
+:root {
+  color-scheme: dark;
+
+  /* Colours */
+  --bg-colour: hsla(0, 0%, 9%, 1);
+  --secondary-bg-colour: hsla(0, 0%, 12%, 1);
+  --border-colour: hsla(0, 0%, 16%, 1);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-colour);
+}

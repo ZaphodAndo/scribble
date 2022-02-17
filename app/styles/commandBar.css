@@ -1,0 +1,61 @@
+.command-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  background-color: var(--secondary-bg-colour);
+  padding: 0 18px;
+  border: 1px solid var(--border-colour);
+  border-radius: 12px;
+  min-width: 602px;
+}
+
+.command-bar .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.command-bar .pointers {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 18px;
+  border-left: 1px solid var(--border-colour);
+  border-right: 1px solid var(--border-colour);
+}
+
+.command-bar .pointers .pointer {
+  background-color: hsla(0, 0%, 77%, 1);
+  border-radius: 50%;
+}
+
+.command-bar .pointers .small-pointer {
+  width: 10px;
+  height: 10px;
+}
+
+.command-bar .pointers .large-pointer {
+  width: 16px;
+  height: 16px;
+}
+
+.command-bar .colours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.command-bar .colours div {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border-colour);
+  border-radius: 50%;
+}
