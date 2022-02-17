@@ -34,6 +34,7 @@
 .command-bar .pointers .pointer {
   background-color: hsla(0, 0%, 77%, 1);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .command-bar .pointers .small-pointer {
@@ -58,4 +59,12 @@
   height: 24px;
   border: 1px solid var(--border-colour);
   border-radius: 50%;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background-color: unset;
+  padding: 0;
+  cursor: pointer;
 }

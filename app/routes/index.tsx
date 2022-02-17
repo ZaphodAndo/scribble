@@ -20,7 +20,7 @@ export const links: LinksFunction = () => {
 export default function Index() {
   return (
     <div>
-      <canvas />
+      <canvas id="canvas" />
       <CommandBar />
     </div>
   );
