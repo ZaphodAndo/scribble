@@ -5,6 +5,12 @@
   --bg-colour: hsla(0, 0%, 9%, 1);
   --secondary-bg-colour: hsla(0, 0%, 12%, 1);
   --border-colour: hsla(0, 0%, 16%, 1);
+  --accent-colour: hsla(198, 100%, 45%, 1);
+}
+
+::selection {
+  color: hsla(0, 0%, 0%, 1);
+  background: var(--accent-colour);
 }
 
 body {

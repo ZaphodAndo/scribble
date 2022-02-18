@@ -31,10 +31,20 @@
   border-right: 1px solid var(--border-colour);
 }
 
-.command-bar .pointers .pointer {
+.command-bar .pointers .active-pointer {
+  background-color: var(--accent-colour);
+}
+
+.pointer {
   background-color: hsla(0, 0%, 77%, 1);
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.command-bar .pointers .pointer:hover,
+.command-bar .pointers .pointer:focus {
+  background-color: var(--accent-colour);
 }
 
 .command-bar .pointers .small-pointer {
@@ -54,12 +64,21 @@
   padding: 20px 0;
 }
 
-.command-bar .colours div {
-  width: 24px;
-  height: 24px;
+.command-bar .colours .active-colour {
+  border: 2px solid var(--accent-colour);
+}
+
+.colour-option {
+  width: 26px;
+  height: 26px;
   border: 1px solid var(--border-colour);
   border-radius: 50%;
-  cursor: pointer;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.colour-option:hover,
+.colour-option:focus {
+  border: 2px solid var(--accent-colour);
 }
 
 button {

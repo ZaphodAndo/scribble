@@ -24,11 +24,11 @@ const CommandBar = () => {
         </button>
       </div>
       <div className="pointers">
-        <PointerOption className="small-pointer" width={5} />
+        <PointerOption className="small-pointer active-pointer" width={5} />
         <PointerOption className="large-pointer" width={15} />
       </div>
       <div className="colours">
-        <ColourOption colour="#000000" />
+        <ColourOption colour="#000000" className="active-colour" />
         <ColourOption colour="#7F7F7F" />
         <ColourOption colour="#880015" />
         <ColourOption colour="#ED1C24" />

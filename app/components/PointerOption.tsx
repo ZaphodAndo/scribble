@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { activeHelper } from "~/helpers/activeHelper";
 import { updateCanvasLineWidth } from "~/helpers/canvasHelper";
 
 type PointerOptionProps = {
@@ -6,11 +8,23 @@ type PointerOptionProps = {
 };
 
 const PointerOption = ({ className, width }: PointerOptionProps) => {
+  const buttonEl = useRef<HTMLButtonElement>(null);
+
   const handleClick = () => {
     updateCanvasLineWidth(width);
+
+    if (buttonEl.current) {
+      activeHelper(buttonEl.current);
+    }
   };
 
-  return <div className={"pointer " + className} onClick={handleClick}></div>;
+  return (
+    <button
+      ref={buttonEl}
+      className={"pointer " + className}
+      onClick={handleClick}
+    />
+  );
 };
 
 export default PointerOption;
