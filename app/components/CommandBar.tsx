@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { enablePencil, enableRubber } from "~/helpers/canvasHelper";
 import PencilIcon from "~/icons/PencilIcon";
 import RubberIcon from "~/icons/RubberIcon";
@@ -5,22 +6,29 @@ import ColourOption from "./ColourOption";
 import PointerOption from "./PointerOption";
 
 const CommandBar = () => {
+  const [pencilStroke, setPencilStroke] = useState("#00A2E8");
+  const [rubberStroke, setRubberStroke] = useState("#FFA4A4");
+
   const pencilClick = () => {
     enablePencil();
+    setPencilStroke("#00A2E8");
+    setRubberStroke("#FFA4A4");
   };
 
   const rubberClick = () => {
     enableRubber();
+    setRubberStroke("#00A2E8");
+    setPencilStroke("#FFA4A4");
   };
 
   return (
     <div className="command-bar">
       <div className="actions">
         <button onClick={pencilClick}>
-          <PencilIcon />
+          <PencilIcon stroke={pencilStroke} />
         </button>
         <button onClick={rubberClick}>
-          <RubberIcon />
+          <RubberIcon stroke={rubberStroke} />
         </button>
       </div>
       <div className="pointers">
